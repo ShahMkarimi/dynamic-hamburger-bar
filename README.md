@@ -1,0 +1,5 @@
+# dynamic-hamburger-bar
+navigation bar with hamburger menu
+this hamburger menu has navigation bar and it is responsiv 
+it is ready 
+made by html, css & javascript
