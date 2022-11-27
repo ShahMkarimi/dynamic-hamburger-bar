@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hamburger-menu</title>
+    <style>
+        body{
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+            background-color: cadetblue;
+        }
+        header{
+            background-color: rgb(103, 52, 243);
+            box-sizing: border-box;
+            position: sticky;
+            top: 140px;
+            height: 50px;
+            width: 100%;
+            z-index: 1000;
+        }
+
+
+        li {
+            list-style-type: none;
+            font-size: 18px;
+            box-sizing: border-box;
+            border-radius: 5px;
+        }
+
+        li:hover {
+            background-color: rgb(127, 87, 239);
+            font-size: 20px;
+
+        }
+
+        a{
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .navbar {
+            min-height: 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 10px;
+        }
+
+        .nav-menu {
+            position: sticky;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+            box-sizing: border-box;
+        }
+
+        .nav-brandind {
+            font-size: 1rem;
+        }
+        .nav-link {
+            transition: 0.7s ease;
+        }
+        .nav-link:hover {
+            color: rgb(98, 10, 10);
+        }
+        .hamburger {
+            display: none;
+            cursor: pointer;
+        }
+
+        .bar {
+            box-sizing: border-box;
+            display: block;
+            width: 30px;
+            height: 3px;
+            margin: 5px auto;
+            -webkit-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+            background-color: #fff;
+        }
+
+
+        @media(max-width: 768px) {
+            .hamburger{
+                display: inline-block;
+                position: relative;
+                
+            }
+
+            .hamburger.active .bar:nth-child(2){
+                opacity: 0;
+            }
+            .hamburger.active .bar:nth-child(1) {
+                transform: translateY(9px) rotate(45deg);
+            }
+            .hamburger.active .bar:nth-child(3){
+                transform: translateY(-9px) rotate(-45deg);
+            }
+            header{
+                top: 130px;
+            }
+            .navbar{
+                position: sticky;
+            }
+            .nav-brandind {
+                font-size: 1rem;
+                position: relative;
+            }
+            
+            .nav-menu {
+                box-sizing: border-box;
+                position: absolute;
+                right:-30%;
+                top: 34px;
+                width: 30%;
+                height: auto;
+                gap: 6px;
+                background-color: rgb(103, 52, 243);
+                flex-direction: column;
+                align-items: flex-start;
+                text-align: right;
+                transition: 0.5s ease-in;
+                border-radius: 0 0 10px;
+            }
+        
+            .nav-item {
+                box-sizing: border-box;
+                margin: 0 0 10px -10px;
+                z-index: 1000;
+            }
+            .nav-menu.active {
+                right: 0px;
+                z-index: 1000;
+
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- only the header you copy and pest to your project -->
+    <header>
+        <nav class="navbar">
+            <a href="#" class="nav-brandind">With Sport Have Healty Life.</a>
+            <ul class="nav-menu" id="menu">
+                <a href="#home" class="nav-link" ><li class="nav-item"> home</li></a>
+                <a href="#international" class="nav-link"><li class="nav-item"> internationl sport </button></a>
+                <a href="#national" class="nav-link" ><li class="nav-item">national</li></a>
+                <a href="#fight" class="nav-link" ><li class="nav-item">sport for fight</li></a>
+                <a href="#health" class="nav-link" ><li class="nav-item">sport for health</li></a>
+            </ul>
+
+       <div class="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        </nav>
+    </header>
+    
+    
+<!-- script part -->
+    <script>
+    const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-menu");
+
+        hamburger.addEventListener ("click", () =>  {
+                hamburger.classList.toggle("active");
+                navMenu.classList.toggle("active");
+
+        })
+
+        document.querySelectorAll(".nav-link").forEach( n => n.
+            addEventListener ("click", () => {
+                hamburger.classList.remove("active");
+                navMenu.classList.remove("active");
+
+            }));
+    </script>
+</body>
+</html>
