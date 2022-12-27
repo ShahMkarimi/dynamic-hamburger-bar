@@ -5,5 +5,6 @@ it is ready
 made by html, css & javascript
 the script & css is in the head of html index
 use able for all page
+html & css & java script
 
 
