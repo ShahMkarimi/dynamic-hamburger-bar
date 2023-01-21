@@ -7,4 +7,3 @@ the script & css is in the head of html index
 use able for all page
 
 
-
