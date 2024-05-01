@@ -1,4 +1,4 @@
-# dynamic-hamburger-bar
+hamburgerMenue
 navigation bar with hamburger menu
 this hamburger menu has navigation bar and it is responsiv 
 it is ready 
